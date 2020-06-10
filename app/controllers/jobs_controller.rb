@@ -12,6 +12,10 @@ class JobsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @job = Job.find(params[:id])
+  end
+
   def job_params
     params.require(:job).permit(:name, :text, :occupation, :image, :region, :email)
   end

@@ -1,0 +1,66 @@
+<header class="header">
+    <div class="header__bg">
+        <div class="header__cat">
+            <div class="header__logo">
+                <a href="/">Get Talent</a>
+            </div>
+            <input type="checkbox" id="hamburger">
+            <label for="hamburger">
+                <span class="hamburger__icon">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </label>
+            <nav class="header__navi">
+                <div class="header__navi__wrap">
+                    <ul class="header__navi__list">
+                        <li class="header__navi__item"><a href="#concept"><span>Concept</span></a></li>
+                        <li class="header__navi__item"><a href="#application"><span>Image</span></a></li>
+                        <li class="header__navi__item"><a href="#card"><span>New Company</span></a></li>
+                        <li class="header__navi__item"><a href="#contact"><span>Contact</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+<h2 class = "sign">ユーザー登録</h2>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, maxlength: "6" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "登録" %>
+  </div>
+  <%= render "devise/shared/links" %>
+<% end %>
+
+<footer class="footer">
+    <p>© Get talent INC. ALL RIGHTS RESERVED.</p>
+</footer>

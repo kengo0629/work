@@ -1,0 +1,53 @@
+<header class="header">
+    <div class="header__bg">
+        <div class="header__cat">
+            <div class="header__logo">
+                <a href="/">Get Talent</a>
+            </div>
+            <input type="checkbox" id="hamburger">
+            <label for="hamburger">
+                <span class="hamburger__icon">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </label>
+            <nav class="header__navi">
+                <div class="header__navi__wrap">
+                    <ul class="header__navi__list">
+                        <li class="header__navi__item"><a href="#concept"><span>Concept</span></a></li>
+                        <li class="header__navi__item"><a href="#application"><span>Image</span></a></li>
+                        <li class="header__navi__item"><a href="#card"><span>New Company</span></a></li>
+                        <li class="header__navi__item"><a href="#contact"><span>Contact</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+            <section class="card mainContent__cat">
+                <div class="mainContent__inner">
+                    <h2 class="mainContent__title" id="card2">Company Details</h2>
+                    <div class="card__cat">
+                        <div class="card__wrap">
+                            <div class="card__list2">
+                                <div class="card__img">
+                                    <img src="<%=@job.image%>" alt="Company Image">
+                                </div>
+                                <div class="card__text2">
+                                <h3 class="card__title"><%= @job.name %></h3 class="card__title">
+                                    <p><%= @job.occupation %></p>
+                                    <p><%= @job.region %></p>
+                                    <p><%= @job.email %></p>
+                                    <p><%= @job.text%></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<footer class="footer">
+    <p>© Get talent INC. ALL RIGHTS RESERVED.</p>
+</footer>

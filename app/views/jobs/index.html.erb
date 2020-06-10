@@ -28,11 +28,13 @@
 <section class="mainKv">
     <h1 class="mainKv__title">現場の人手不足お困りではないですか？</h1>
     <ul class = "btn">
-      <li><%= link_to "新規登録", "#", method: :get%></li>
-      <li><%= link_to "ログイン", "#", method: :get%></li>
-    </ul>
-    <ul class = "btn2">
-      <li><%= link_to "会社を登録する", new_job_path, method: :get%></li>
+    <% if user_signed_in?%>
+      <li><%= link_to "会社登録する", new_job_path, method: :get%></li>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to "新規登録", "/users/sign_up" , method: :get%></li>
+      <li><%= link_to "ログイン", new_user_session_path, method: :get%></li>
+    <% end %>
     </ul>
 </section>
 
@@ -92,8 +94,8 @@
                                 <div class="card__text">
                                     <p><%= job.occupation %></p>
                                     <p><%= job.region %></p>
-                                    <p><%= job.text%></p>
                                     <p>お気軽にご連絡ください。</p>
+                                    <%= link_to "詳細ページへ", job_path(job.id)%>
                                 </div>
                             </li>
                           <% end %>
