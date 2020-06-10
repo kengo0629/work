@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_06_10_042406) do
 
   create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.string "job"
+    t.string "type"
     t.text "text"
     t.text "image"
     t.string "region"

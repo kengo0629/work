@@ -2,7 +2,7 @@ class CreateJobs < ActiveRecord::Migration[5.2]
   def change
     create_table :jobs do |t|
       t.string :name
-      t.string :job
+      t.string :type
       t.text :text
       t.text :image
       t.string :region
