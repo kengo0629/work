@@ -14,10 +14,11 @@ ActiveRecord::Schema.define(version: 2020_06_10_042406) do
 
   create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "occupation"
     t.text "text"
     t.text "image"
     t.string "region"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
