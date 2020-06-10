@@ -1,0 +1,58 @@
+<header class="header">
+    <div class="header__bg">
+        <div class="header__cat">
+            <div class="header__logo">
+                <a href="/">Get Talent</a>
+            </div>
+            <input type="checkbox" id="hamburger">
+            <label for="hamburger">
+                <span class="hamburger__icon">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </label>
+            <nav class="header__navi">
+                <div class="header__navi__wrap">
+                    <ul class="header__navi__list">
+                        <li class="header__navi__item"><a href="#concept"><span>Concept</span></a></li>
+                        <li class="header__navi__item"><a href="#application"><span>Image</span></a></li>
+                        <li class="header__navi__item"><a href="#card"><span>New Company</span></a></li>
+                        <li class="header__navi__item"><a href="#contact"><span>Contact</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class = "wrap">
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <h2　class = "sign2">ログイン</h2>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Log in" %>
+    </div>
+    <%= render "devise/shared/links" %>
+  <% end %>
+</div>
+
+<footer class="footer">
+    <p>© Get talent INC. ALL RIGHTS RESERVED.</p>
+</footer>
