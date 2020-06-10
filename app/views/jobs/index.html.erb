@@ -27,5 +27,122 @@
     </div>
 </header>
 <section class="mainKv">
-    <h1 class="mainKv__title">Stylish Site</h1>
+    <h1 class="mainKv__title">現場の人手不足お困りではないですか？</h1>
+    <ul class = "btn">
+      <li><%= link_to "新規登録", "#", method: :get%></li>
+      <li><%= link_to "ログイン", "#", method: :get%></li>
+    </ul>
 </section>
+
+<!-- Conseptカテゴリー -->
+<section class="concept mainContent__cat">
+    <div class="mainContent__inner">
+        <h2 class="mainContent__title" id="concept">Concept</h2>
+        <div class="concept__cat">
+            <div class="concept__img">
+                <%# <img src= "main3.jpg" alt="concept"> %>
+            </div>
+            <div class="concept__text">
+                <h3 class="mainContent__subTitle">円滑な人員補充/企業の出会い</h3>
+                <div class="concept__sentence">
+                    <p>建設現場では重度の人員不足により、作業工程の遅れが日々深刻化しております。当サービスでは企業様毎の出会いを促進させる事で人員補充をお助けし、円滑な作業工程をお助け致します。 </p>
+                    <p>①自社のPR活動　御社の存在をサービス上へ展開し、他企業様へ存在をアピールしましょう。御社のPR活動をサポート致します。 </p>
+                    <p>②取引先の拡大　認知出来る企業を増やす事で人員増加・適材適所の配置を後押し致します。互いを知る事で今までに無い業務遂行が可能となり、企業間の結束を強めます。 </p>
+                    <p>③雇用の拡充　円滑な工程管理は今まで以上の業務量を生み出します。それは単なる売上の増加に止まらず企業の成長/雇用の拡大といった企業としての社会的意義を意味します。</p>
+                    <p>④建設業界の成長　企業の成長は企業だけに止まらず、業界全体の成長を意味します。新たな企業の進出/労働者の増加は業界そのものを大きく盛り上げる事になるでしょう。</p>
+                    <p>社会的な課題でもある『労働人口の減少』は今後もさらに加速して行くでしょう。そういった苦しい状況下の中で企業間・労働者間の繋がりを密にする事が現状打破の一助になれば幸いです。 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- applicationカテゴリー -->
+<section class="application mainContent__cat">
+                <h2 class="mainContent__title" id="application">Support Builders</h2>
+                <div class="application__cat">
+                    <div class="application__img">
+                        <div class="application__img__bg"></div>
+                    </div>
+                    <div class="application__area">
+                        <div class="application__area__inner">
+                            <h3 class="mainContent__subTitle">For workers</h3>
+                            <div class="application__sentence">
+                                <p>We are working on application development every day.<br>
+                                    It is the most important thing in the business scene.</br>
+                                    I want everyone to develop that feeling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card mainContent__cat">
+                <div class="mainContent__inner">
+                    <h2 class="mainContent__title" id="card">New Company</h2>
+                    <div class="card__cat">
+                        <ul class="card__wrap">
+                            <li class="card__list">
+                                <h3 class="card__title">Beautiful dance</h3 class="card__title">
+                                <div class="card__img">
+                                    <img src="./assets/images/card_01.jpg" alt="Beautiful dance">
+                                </div>
+                                <div class="card__text">
+                                    <p>The description of the card goes here.</p>
+                                    <p>Again, here is the description of the card</p>
+                                    <p>The description of the card goes here.</p>
+                                    <p>Again, here is the description of the card</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+                        <section class="contact mainContent__cat">
+                <h2 class="mainContent__title" id="contact">Contact</h2>
+                <div class="contact__cat">
+                    <div class="mainContent__inner">
+                        <form name="contact" id="valForm">
+                            <dl class="contact__item">
+                                <dt><label for="name" class="contact__label">Name</label></dt>
+                                <dd><input type="text" name="name" id="name" placeholder="example： Hattori Hanzo" value=""></dd>
+                            </dl>
+                            <dl class="contact__item">
+                                <dt><label for="mail" class="contact__label">Mail</label></dt>
+                                <dd><input type="email" name="mail" id="mail" placeholder="example：ninnin@example.com" value=""></dd>
+                            </dl>
+                            <dl class="contact__item">
+                                <dt><label for="tel" class="contact__label">Tel</label></dt>
+                                <dd><input type="tel" name="tel" id="tel" placeholder="example：09001234567" value=""></dd>
+                            </dl>
+                            <dl class="contact__item">
+                                <dt><label for="textarea">Contacts</label></dt>
+                                <dd><textarea name="textarea" id="textarea" placeholder="Please enter your inquiry" cols="30" rows="10" value=""></textarea></dd>
+                            </dl>
+                            <button class="contact__btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+    <p>© Get talent INC. ALL RIGHTS RESERVED.</p>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function() {
+        //スムーズスクロール
+        let runScroll = function() {
+            $('a[href^="#"]').click(function() {
+                let speed = 400;
+                let href = $(this).attr("href");
+                let $target = $(href == "#" || href == "" ? 'html' : href);
+                let position = $target.offset().top - 100;
+
+                $('body,html').animate({
+                    scrollTop: position
+                }, speed, 'swing');
+                return false;
+            });
+        };
