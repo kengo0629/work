@@ -31,6 +31,9 @@
       <li><%= link_to "新規登録", "#", method: :get%></li>
       <li><%= link_to "ログイン", "#", method: :get%></li>
     </ul>
+    <ul class = "btn2">
+      <li><%= link_to "会社を登録する", new_job_path, method: :get%></li>
+    </ul>
 </section>
 
 <!-- Conseptカテゴリー -->
@@ -80,17 +83,17 @@
                     <h2 class="mainContent__title" id="card">New Company</h2>
                     <div class="card__cat">
                         <ul class="card__wrap">
-                          <%= @jobs.each do |job| %>
+                          <%- @jobs.each do |job| %>
                             <li class="card__list">
                                 <h3 class="card__title"><%= job.name %></h3 class="card__title">
                                 <div class="card__img">
-                                    <img src="./assets/images/card_01.jpg" alt="Beautiful dance">
+                                    <img src="<%=job.image%>" alt="Company Image">
                                 </div>
                                 <div class="card__text">
-                                    <p>The description of the card goes here.</p>
-                                    <p>Again, here is the description of the card</p>
-                                    <p>The description of the card goes here.</p>
-                                    <p>Again, here is the description of the card</p>
+                                    <p><%= job.occupation %></p>
+                                    <p><%= job.region %></p>
+                                    <p><%= job.text%></p>
+                                    <p>お気軽にご連絡ください。</p>
                                 </div>
                             </li>
                           <% end %>

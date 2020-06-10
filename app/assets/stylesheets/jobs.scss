@@ -112,6 +112,26 @@ li a{
   margin-right: 15px;
 }
 
+.btn2{
+  position: absolute;
+  top: 90%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.btn2 li {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.btn2 a{
+  color: whitesmoke;
+  padding : 10px 15px;
+  background-color: rgba(30, 157, 173, 0.897);
+  border-radius: 5px;
+  margin-right: 15px;
+}
 // メインコンテンツーーーーーーーーーーーーーーーーーーーー
 
 .mainContent__inner {
@@ -264,7 +284,7 @@ li a{
 
 .card__img img {
   display: block;
-  width: 100%;
+  width: 98%;
   height: 600px;
   padding: 4px;
   object-fit: cover;
@@ -347,4 +367,27 @@ li a{
   padding: 16px;
   font-size: .8rem;
   text-align: center;
+}
+
+#contact2 {
+  margin-top: 150px;
+}
+
+#job_name,
+#job_image,
+#job_type,
+#job_region,
+#job_text {
+  margin-bottom: 15px;
+}
+
+.contact .sub {
+  margin: 0 auto;
+  width: 300px;
+  background-color: yellow;
+}
+
+form p{
+  font-size: 20px;
+  padding-bottom: 5px;
 }

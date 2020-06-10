@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all
+    @jobs = Job.all.order("created_at DESC").limit(6)
   end
 
   def new
@@ -9,9 +9,10 @@ class JobsController < ApplicationController
 
   def create
     Job.create(job_params)
+    redirect_to root_path
   end
 
   def job_params
-    params.require(:job).permit(:name, :text, :type, :image, :region)
+    params.require(:job).permit(:name, :text, :occupation, :image, :region, :email)
   end
 end
