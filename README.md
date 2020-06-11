@@ -23,12 +23,12 @@ Things you may want to cover:
 
 * ...
 
-# newRead
+# 概要  
 
-概要
 企業間の認知のための共通のプラットフォーム（アプリケーション）  
 
-アプリケーション名  
+# アプリケーション名  
+
 Get Talent
 
 # get talent DB設計
