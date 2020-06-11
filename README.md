@@ -67,6 +67,8 @@ RUby/RubyonRails/Javascript/HTML/CSS/Github/Visual Studio Code
 
 [![ログイン](https://i.gyazo.com/35528c66fe5e92bd3bb2f662acbe1e90.gif)](https://gyazo.com/35528c66fe5e92bd3bb2f662acbe1e90)
 
+[![会社登録](https://i.gyazo.com/f3665179741df78ddae27345ed0cb1e7.gif)](https://gyazo.com/f3665179741df78ddae27345ed0cb1e7)
+
 # 使い方
 
 # Get Talent DB設計
