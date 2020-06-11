@@ -23,11 +23,13 @@ class JobsController < ApplicationController
   def update
     job = Job.find(params[:id])
     job.update(job_params)
+    redirect_to root_path
   end
 
   def destroy
     job = Job.find(params[:id])
     job.destroy
+    redirect_to root_path
   end
 
   def job_params
