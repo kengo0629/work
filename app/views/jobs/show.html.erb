@@ -41,10 +41,12 @@
                                     <p><%= @job.region %></p>
                                     <p><%= @job.email %></p>
                                     <p><%= @job.text%></p>
+                                <% if user_signed_in? && @job.user_id == current_user.id %>
                                   <ul style = "display: flex; justify-content: center;">
                                     <li><p><%= link_to "編集", edit_job_path(@job), method: :get, class: :"btn3" %></p></li>
                                     <li><p><%= link_to "削除", "/jobs/#{@job.id}", method: :delete, class: :"btn3" %></p></li>
                                   </ul>
+                                <% end %>
                                 </div>
                             </div>
                         </div>
