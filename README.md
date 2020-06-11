@@ -61,6 +61,9 @@ Get Talent</br>
 
 RUby/RubyonRails/Javascript/HTML/CSS/Github/Visual Studio Code
 
+# デモ動画
+
+[![Image from Gyazo](https://i.gyazo.com/8f42788e58a652da821a79293b68564a.gif)](https://gyazo.com/8f42788e58a652da821a79293b68564a)
 # 使い方
 
 # Get Talent DB設計
