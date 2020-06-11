@@ -1,0 +1,76 @@
+<header class="header">
+    <div class="header__bg">
+        <div class="header__cat">
+            <div class="header__logo">
+                <a href="/">Get Talent</a>
+            </div>
+            <input type="checkbox" id="hamburger">
+            <label for="hamburger">
+                <span class="hamburger__icon">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </label>
+            <nav class="header__navi">
+                <div class="header__navi__wrap">
+                    <ul class="header__navi__list">
+                        <li class="header__navi__item"><a href="#concept"><span>Concept</span></a></li>
+                        <li class="header__navi__item"><a href="#application"><span>Image</span></a></li>
+                        <li class="header__navi__item"><a href="#card"><span>New Company</span></a></li>
+                        <li class="header__navi__item"><a href="#contact"><span>Contact</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="contact mainContent__cat">
+                <h2 class="mainContent__title" id="contact2">会社登録</h2>
+                <div class="contact__cat">
+                    <div class="mainContent__inner">
+
+                      <%= form_with(model: @job, local: true) do |form|%>
+                      　<p>会社名</p>
+                        <%= form.text_field :name, placeholder: "例) 株式会社〇〇" %>
+                        <p>画像URL</p>
+                        <%= form.text_field :image, placeholder: "画像のURLを貼り付けてください。" %>
+                        <p>Email</p>
+                        <%= form.text_field :email, placeholder: "例) kensetsu@gmail.com" %>
+                        <p>職種</p>
+                        <%= form.text_field :occupation, placeholder: "例) 鳶"%>
+                        <p>所在地</p>
+                        <%= form.text_field :region, placeholder: "例) 神奈川県横浜市" %>
+                        <p>自由記入欄</p>
+                        <%= form.text_area :text, placeholder: "その他ご自由にお書きください。", rows: "10" %>
+                        <%= form.submit "送信", class: :"sub"%>
+                      <% end %>
+                        <%# <form name="contact" id="valForm">
+                            <dl class="contact__item">
+                                <dt><label for="name" class="contact__label">Name</label></dt>
+                                <dd><input type="text" name="name" id="name" placeholder="example： Hattori Hanzo" value=""></dd>
+                            </dl>
+                            <dl class="contact__item">
+                                <dt><label for="mail" class="contact__label">Mail</label></dt>
+                                <dd><input type="email" name="mail" id="mail" placeholder="example：ninnin@example.com" value=""></dd>
+                            </dl>
+                            <dl class="contact__item">
+                                <dt><label for="tel" class="contact__label">Tel</label></dt>
+                                <dd><input type="tel" name="tel" id="tel" placeholder="example：09001234567" value=""></dd>
+                            </dl>
+                            <dl class="contact__item">
+                                <dt><label for="textarea">Contacts</label></dt>
+                                <dd><textarea name="textarea" id="textarea" placeholder="Please enter your inquiry" cols="30" rows="10" value=""></textarea></dd>
+                            </dl>
+                            <button class="contact__btn">Submit</button>
+                        </form> %>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+<footer class="footer">
+    <p>© Get talent INC. ALL RIGHTS RESERVED.</p>
+</footer>

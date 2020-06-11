@@ -409,3 +409,13 @@ form p{
 #card2 {
   margin-top: 150px;
 }
+
+.btn3 {
+  text-decoration: none;
+  margin-right: 15px;
+  color: darken($color: #000000, $amount: 0);
+  padding: 5px 15px;
+  background-color: yellow;
+  border-radius: 5px;
+  border: 1px solid;
+}
