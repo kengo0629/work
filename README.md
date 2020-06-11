@@ -22,3 +22,57 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# get talent DB設計
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|job_id|integer|null: false, foreign_key: true|
+|text|string|
+
+### Association
+- belongs_to :job
+- belongs_to :user
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+
+### Association
+- has_many :jobs
+- has_many :comments
+- has_many :requests
+
+## jobsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|occupation|string|null: false|
+|text|text|null: false|
+|image|text|null: false|
+|region|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :comments
+- belongs_to :user
+
+## requestsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|image|text|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+
