@@ -63,7 +63,7 @@ RUby/RubyonRails/Javascript/HTML/CSS/Github/Visual Studio Code
 
 # デモ動画
 
-[![Image from Gyazo](https://i.gyazo.com/8f42788e58a652da821a79293b68564a.gif)](https://gyazo.com/8f42788e58a652da821a79293b68564a)
+[![トップページ全体図](https://i.gyazo.com/8f42788e58a652da821a79293b68564a.gif)](https://gyazo.com/8f42788e58a652da821a79293b68564a)
 
 [![ログイン](https://i.gyazo.com/35528c66fe5e92bd3bb2f662acbe1e90.gif)](https://gyazo.com/35528c66fe5e92bd3bb2f662acbe1e90)
 
