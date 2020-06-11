@@ -71,7 +71,13 @@ RUby/RubyonRails/Javascript/HTML/CSS/Github/Visual Studio Code
 
 [![詳細ページ](https://i.gyazo.com/084ff2628db3d3343eeaa33c03414ebe.gif)](https://gyazo.com/084ff2628db3d3343eeaa33c03414ebe)
 
-# 使い方
+# 今後実装したい機能/課題
+
+・職種や地域等に合わせた検索機能（必要としている企業をいち早く調べる事ができるため）
+
+・画像が大きいため投稿が増えるとページが縦長になってしまう　⇨　一覧ページを別に作成する or ページネーションを使用する
+
+# 工夫したポイント
 
 # Get Talent DB設計
 
