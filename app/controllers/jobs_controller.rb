@@ -15,6 +15,8 @@ class JobsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @job.comments.includes(:user)
   end
 
   def edit
@@ -32,13 +34,13 @@ class JobsController < ApplicationController
     redirect_to root_path
   end
 
-  def job_params
-    params.require(:job).permit(:name, :text, :occupation, :image, :region, :email).merge(user_id: current_user.id)
-  end
-
   private
   def set_params
     @job = Job.find(params[:id])
+  end
+
+  def job_params
+    params.require(:job).permit(:name, :text, :occupation, :image, :region, :email).merge(user_id: current_user.id)
   end
 
   def move_to_index
