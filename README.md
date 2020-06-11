@@ -23,6 +23,10 @@ Things you may want to cover:
 
 * ...
 
+# newRead
+
+![サンプル画像](./da1c4b40730ef43e23ffda9b263d8f2c.jpg)
+
 # 概要  
 
 企業間の認知のための共通のプラットフォーム（アプリケーション）</br>  
