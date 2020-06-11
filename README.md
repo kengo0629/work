@@ -50,6 +50,10 @@ Get Talent</br>
 
 ⑤仕事依頼（実装中）</br>
 
+#開発環境
+
+RUby/RubyonRails/Javascript/HTML/CSS/Github/Visual Studio Code
+
 # Get Talent DB設計
 
 ## commentsテーブル
