@@ -87,6 +87,11 @@ RUby/RubyonRails/Javascript/HTML/CSS/Github/Visual Studio Code
 
 ・利用するユーザーの事を考え、READMEを読まずともサービスの目的/用途を理解できるように、トップページに記載する事で現実的なアプリケーションにする事を意識しました。</br>
 
+# 本番環境
+
+・IPアドレス: 13.113.218.213
+※デプロイ中につき表示されないページがある場合がございます。
+
 # Get Talent DB設計
 
 ## commentsテーブル
