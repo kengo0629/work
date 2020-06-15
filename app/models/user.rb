@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :jobs
   has_many :comments
+  has_many :requests
 end

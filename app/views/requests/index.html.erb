@@ -1,0 +1,50 @@
+<header class="header">
+    <div class="header__bg">
+        <div class="header__cat">
+            <div class="header__logo">
+                <a href="/">Get Talent</a>
+            </div>
+            <input type="checkbox" id="hamburger">
+            <label for="hamburger">
+                <span class="hamburger__icon">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </label>
+            <nav class="header__navi">
+                <div class="header__navi__wrap">
+                    <ul class="header__navi__list">
+                        <li class="header__navi__item"><a href="#concept"><span>Concept</span></a></li>
+                        <li class="header__navi__item"><a href="#application"><span>Image</span></a></li>
+                        <li class="header__navi__item"><a href="#card"><span>New Company</span></a></li>
+                        <li class="header__navi__item"><a href="#contact"><span>Contact</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<%= form_with(model: @request, local: true) do |form| %>
+  <%= form.text_field :name, placeholder: "依頼名" %>
+  <%= form.text_field :image, placeholder: "Image Url" %>
+  <%= form.text_field :text, placeholder: "詳細内容" %>
+  <%= form.submit "登録"%>
+<% end %>
+
+<div class="requests">
+    <h4>＜依頼一覧＞</h4>
+    <% if @requests %>
+        <% @requests.each do |request| %>
+        <p>
+            <strong><%= link_to request.user.name, "#" %>：</strong>
+            <%= request.text %>
+        </p>
+        <% end %>
+    <% end %>
+</div>
+
+ <footer class="footer">
+    <p>© Get talent INC. ALL RIGHTS RESERVED.</p>
+</footer>

@@ -19,6 +19,9 @@
                         <li class="header__navi__item"><a href="#application"><span>Image</span></a></li>
                         <li class="header__navi__item"><a href="#card"><span>New Company</span></a></li>
                         <li class="header__navi__item"><a href="#contact"><span>Contact</span></a></li>
+                        <% if user_signed_in? %>
+                        <li><%= link_to "依頼一覧", requests_path, method: :get %></li>
+                        <% end %>
                     </ul>
                 </div>
             </nav>
@@ -29,8 +32,9 @@
     <h1 class="mainKv__title">現場の人手不足お困りではないですか？</h1>
     <ul class = "btn">
     <% if user_signed_in?%>
-      <li><%= link_to "会社登録する", new_job_path, method: :get%></li>
+      <li><%= link_to "会社登録", new_job_path, method: :get%></li>
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+
     <% else %>
       <li><%= link_to "新規登録", "/users/sign_up" , method: :get%></li>
       <li><%= link_to "ログイン", new_user_session_path, method: :get%></li>
