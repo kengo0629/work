@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-# newRead
+# Get Talent
 
 ![サンプル画像](./da1c4b40730ef43e23ffda9b263d8f2c.jpg)
 
